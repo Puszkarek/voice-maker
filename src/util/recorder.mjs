@@ -32,6 +32,7 @@ export default class Recorder {
 		this.mediaRecorder.stop();
 	}
 	getRecordingURL() {
+		if (this.recordedBlobs.length > 1) this.recordedBlobs.shift();
 		const blob = new Blob(this.recordedBlobs, { type: this.audioType });
 		console.log(this.recordedBlobs);
 		return window.URL.createObjectURL(blob);
