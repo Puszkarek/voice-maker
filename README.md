@@ -1,13 +1,27 @@
-# Voice Memo App Using HTML5, Media Recorder and getUserMedia APIs
+# 🚀 Voice Memo App
+
+Record your voice with this app create using HTML5, Media Recorder and getUserMedia APIs
+
+## 💻 Build With
+
+- [Webpack](https://webpack.js.org/ "Webpack")
+- [TypeScript](https://www.typescriptlang.org/ "TypeScript")
 
 ## Running
 
-- npm ci && npm start
+```
+npm run build
+```
+
+or
+
+```
+yarn build
+```
 
 ## Demo
 
 - When you click start recording it'll record your voice and then play it .
-
 
 ## Credits
 
