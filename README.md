@@ -1,4 +1,4 @@
-# 🚀 Voice Memo App
+# 🚀 Voice Maker App
 
 Record your voice with this app create using HTML5, Media Recorder and getUserMedia APIs
 
