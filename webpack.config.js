@@ -13,7 +13,7 @@ const stylesHandler = isProduction
 const config = {
   entry: "./src/scripts/index.ts",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "public/"),
   },
   devServer: {
     open: true,
@@ -21,11 +21,8 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "index.html",
+      template: "src/index.html",
     }),
-
-    // Add your plugins here
-    // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
   module: {
     rules: [
