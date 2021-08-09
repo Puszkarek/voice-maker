@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
   }
@@ -13,6 +14,7 @@
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    border: 1px solid red;
   }
   
   .button {
@@ -33,6 +35,7 @@
     cursor: pointer;
   }
   .button-wrapper {
+          border: 1px solid red;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
