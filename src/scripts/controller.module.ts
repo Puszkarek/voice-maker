@@ -1,13 +1,17 @@
+import { Media } from "./util/media.module";
+import { View } from "./view.module";
+import { Recorder } from "./util/recorder.module";
+
 interface IControllerProps {
-  view: any;
-  media: any;
-  recorder: any;
+  view: View;
+  media: Media;
+  recorder: Recorder;
 }
 
 export class Controller {
-  view: any;
-  media: any;
-  recorder: any;
+  view: View;
+  media: Media;
+  recorder: Recorder;
   constructor({ view, media, recorder }: IControllerProps) {
     this.view = view;
     this.media = media;
@@ -20,6 +24,7 @@ export class Controller {
   _init() {
     this.view.configRecordingButton(this.onStartRecord.bind(this));
     this.view.configStopButton(this.onStopRecord.bind(this));
+    this.view.configDeleteButton(this.onDeleteRecord.bind(this));
   }
   async onStartRecord() {
     const audioStream = await this.media.getAudio();
@@ -31,5 +36,9 @@ export class Controller {
       const audioURL = this.recorder.getRecordingURL();
       this.view.playAudio(audioURL);
     }, 100);
+  }
+  async onDeleteRecord() {
+    this.recorder.recordedBlobs = [];
+    this.view.stopAudio();
   }
 }
