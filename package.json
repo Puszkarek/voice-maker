@@ -2,10 +2,6 @@
   "name": "my-webpack-project",
   "version": "1.0.0",
   "description": "My webpack project",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
     "start": "webpack serve",
     "dev": "webpack --mode=development",
